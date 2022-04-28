@@ -47,7 +47,7 @@ header{
 
 nav{
     width: 100%;
-    padding: 1.2rem 1rem ;
+    padding: 1rem 1rem ;
 }
 
 .logo-menu-group{
@@ -159,11 +159,6 @@ img{
     max-width: 100%;
 }
 
-/* login--register link */
-.form{
-    display: none;
-}
-
 button{
     border: none;
     background-color: transparent;
@@ -175,6 +170,22 @@ button{
 button#register{
     border: 2px solid hsl(0, 0%, 8%);
     border-radius: 10px;
+}
+
+/* login--register buttons */
+
+.mobile--form{
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.mobile--form button{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.desktop--form{
+    display: none;
 }
 
 /* --------------------------------------------------------- */
@@ -237,7 +248,7 @@ p{
     font-weight: bold;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
     header{
         display: flex;
         justify-content: space-between;
@@ -246,7 +257,7 @@ p{
         margin-inline: auto;
     }
 
-    .logo-menu-group{
+    .logo-menu-group {
         width: 70%;
     }
 
@@ -302,8 +313,12 @@ p{
         display: none;
     }
 
-    /* login--register buttons */
-    .form{
+    /* login--register buttons for mobile*/
+    .mobile--form{
+        display: none;
+    }
+
+    .desktop--form{
         display: flex;
     }
 
@@ -352,9 +367,10 @@ p{
 
 }
 
-@media (min-width: 1400px) {
-    .logo-menu-group{
-        width: 50%;
+@media screen and (min-width: 1400px) {
+
+    .logo-menu-group {
+        width: 40% !important;
     }
 
     .hero--section{
@@ -370,15 +386,12 @@ p{
     }
 
     .client--section{
-        /* position: absolute;
-        bottom: 0; */
         transform: translateY(200%);
     }
 
 }
 
 @media (min-width: 2000px) {
-    
 
     li{
         font-size: 30px;
